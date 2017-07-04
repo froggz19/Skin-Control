@@ -1393,7 +1393,7 @@ std::string getOverlayText(PedSkin & skin, int iID, int sID, int type){
 		case oHairID:
 			return "Highlights " + std::to_string(skin.freemodeData.hairHighlights);
 		default:
-			return "Opacity" + std::to_string(skin.freemodeData.overlay[iID].opacity * 5) + "%";
+			return "Opacity " + std::to_string(skin.freemodeData.overlay[iID].opacity * 5) + "%";
 		}
 		break;
 	}

@@ -37,7 +37,7 @@ Hash getModelHash(int index){
 	return GAMEPLAY::GET_HASH_KEY((char*)getModel(index));
 }
 
-	// Padding is used to separate different pages of the model selection menu
+// Padding is used to separate different pages of the model selection menu
 LPCSTR pedModelData[740][2] = {
 	{ "player_zero", "Michael" },
 	{ "player_one", "Franklin" },
