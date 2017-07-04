@@ -9,6 +9,7 @@ By Neutrinobeam
 #include "script.h"
 
 const int numTints = 8;
+const int numTintsMk2 = 31;
 
 int getNumWeapons();
 

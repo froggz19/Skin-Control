@@ -24,7 +24,7 @@ LPCSTR weaponNames[] = {
 	"Grenade", "Sticky Bomb", "Proximity Mine", "Teargas", "BZ Gas", "Molotov", "Fire Extinguisher", "Jerry Can", "Snowball", "Flare", "Ball", "Pipe Bomb", "Scanner", "Briefcase", "Alt Briefcase" };
 
 LPCSTR weaponComponentNames[] = {
-	"",
+	" ", 
 	"COMPONENT_ADVANCEDRIFLE_CLIP_01", "COMPONENT_ADVANCEDRIFLE_CLIP_02", "COMPONENT_ADVANCEDRIFLE_VARMOD_LUXE", "COMPONENT_APPISTOL_CLIP_01",
 	"COMPONENT_APPISTOL_CLIP_02", "COMPONENT_APPISTOL_VARMOD_LUXE", "COMPONENT_ASSAULTRIFLE_CLIP_01", "COMPONENT_ASSAULTRIFLE_CLIP_02",
 	"COMPONENT_ASSAULTRIFLE_MK2_CAMO", "COMPONENT_ASSAULTRIFLE_MK2_CAMO_02", "COMPONENT_ASSAULTRIFLE_MK2_CAMO_03", "COMPONENT_ASSAULTRIFLE_MK2_CAMO_04",
@@ -85,28 +85,100 @@ DWORD getWeaponTintMax(Hash model){
 		return 0;
 	}
 	else if (index < 12){
-		//"WEAPON_UNARMED", "WEAPON_KNIFE", "WEAPON_NIGHTSTICK", "WEAPON_HAMMER", "WEAPON_BAT", "WEAPON_CROWBAR", "WEAPON_GOLFCLUB", "WEAPON_BOTTLE", "WEAPON_DAGGER", "WEAPON_HATCHET",
-		//"WEAPON_BALL", "WEAPON_SNOWBALL"
+
+		/*WEAPON_UNARMED
+		WEAPON_KNIFE
+		WEAPON_MACHETE
+		WEAPON_FLASHLIGHT
+		WEAPON_NIGHTSTICK
+		WEAPON_HAMMER
+		WEAPON_BAT
+		WEAPON_GOLFCLUB
+		WEAPON_CROWBAR
+		WEAPON_BOTTLE
+		WEAPON_DAGGER
+		WEAPON_HATCHET*/
+
 		return 1;
 	}
 	else if (index == 12) {
-		// "WEAPON_KNUCKLE",
+		//WEAPON_KNUCKLE
 		return 10;
 	}
-	else if (index > 47){
-		//"WEAPON_GRENADE", "WEAPON_STICKYBOMB", "WEAPON_PROXMINE", "WEAPON_SMOKEGRENADE", "WEAPON_BZGAS", "WEAPON_FLARE",
-		//"WEAPON_MOLOTOV", "WEAPON_FIREEXTINGUISHER", "WEAPON_PETROLCAN", "WEAPON_DIGISCANNER", "WEAPON_BRIEFCASE", "WEAPON_BRIEFCASE_02"
+	else if (index == 13) {
+		//WEAPON_SWITCHBLADE
+		return 2;
+	}
+	else if (index == 14) {
+		//WEAPON_BATTLEAXE
+		return 1;
+	}
+	else if (index == 15) {
+		//WEAPON_POOLCUE
+		return 1;
+	}
+	else if (index == 16) {
+		//WEAPON_WRENCH
+		return 1;
+	}
+	else if (index == 28) {
+		//WEAPON_PISTOL_MK2
+		return numTintsMk2;
+	}
+	else if (index == 38) {
+		//WEAPON_SMG_MK2
+		return numTintsMk2;
+	}
+	else if (index == 39) {
+		//WEAPON_COMBATMG_MK2
+		return numTintsMk2;
+	}
+	else if (index == 46) {
+		//WEAPON_ASSAULTRIFLE_MK2
+		return numTintsMk2;
+	}
+	else if (index == 47) {
+		//WEAPON_CARBINERIFLE_MK2
+		return numTintsMk2;
+	}
+	else if (index == 59) {
+		//WEAPON_HEAVYSNIPER_MK2
+		return numTintsMk2;
+	}
+	else if (index > 67){
+
+		/*WEAPON_GRENADE
+		WEAPON_STICKYBOMB
+		WEAPON_PROXMINE
+		WEAPON_SMOKEGRENADE
+		WEAPON_BZGAS
+		WEAPON_MOLOTOV
+		WEAPON_FIREEXTINGUISHER
+		WEAPON_PETROLCAN
+		WEAPON_SNOWBALL
+		WEAPON_FLARE
+		WEAPON_BALL
+		WEAPON_PIPEBOMB
+		WEAPON_DIGISCANNER
+		WEAPON_BRIEFCASE
+		WEAPON_BRIEFCASE_02*/
+
 		return 1;
 	}
 	else{
-		/*	"WEAPON_PISTOL", "WEAPON_COMBATPISTOL", "WEAPON_SNSPISTOL", "WEAPON_APPISTOL",
-		"WEAPON_PISTOL50", "WEAPON_HEAVYPISTOL", "WEAPON_VINTAGEPISTOL", "WEAPON_MARKSMANPISTOL", "WEAPON_STUNGUN", "WEAPON_FLAREGUN",
-		"WEAPON_MICROSMG", "WEAPON_SMG", "WEAPON_ASSAULTSMG", "WEAPON_COMBATPDW", "WEAPON_MG", "WEAPON_COMBATMG", "WEAPON_GUSENBERG",
-		"WEAPON_ASSAULTRIFLE", "WEAPON_CARBINERIFLE", "WEAPON_ADVANCEDRIFLE", "WEAPON_SPECIALCARBINE", "WEAPON_BULLPUPRIFLE",
-		"WEAPON_PUMPSHOTGUN", "WEAPON_SAWNOFFSHOTGUN", "WEAPON_ASSAULTSHOTGUN", "WEAPON_BULLPUPSHOTGUN", "WEAPON_HEAVYSHOTGUN",
-		"WEAPON_SNIPERRIFLE", "WEAPON_HEAVYSNIPER", "WEAPON_MARKSMANRIFLE", "WEAPON_MUSKET",
-		"WEAPON_GRENADELAUNCHER", "WEAPON_RPG", "WEAPON_FIREWORK", "WEAPON_MINIGUN", "WEAPON_RAILGUN", "WEAPON_HOMINGLAUNCHER",
-		*/
+
+		/*WEAPON_PISTOL, WEAPON_COMBATPISTOL, WEAPON_APPISTOL, WEAPON_PISTOL50,
+		WEAPON_SNSPISTOL, WEAPON_HEAVYPISTOL, WEAPON_VINTAGEPISTOL, WEAPON_STUNGUN,
+		WEAPON_FLAREGUN, WEAPON_MARKSMANPISTOL, WEAPON_REVOLVER, WEAPON_MICROSMG, 
+		WEAPON_SMG, WEAPON_ASSAULTSMG, WEAPON_MG, WEAPON_COMBATMG,
+		WEAPON_GUSENBERG, WEAPON_COMBATPDW, WEAPON_MACHINEPISTOL, WEAPON_MINISMG,
+		WEAPON_ASSAULTRIFLE, WEAPON_CARBINERIFLE, WEAPON_ADVANCEDRIFLE, WEAPON_SPECIALCARBINE, 
+		WEAPON_BULLPUPRIFLE, WEAPON_COMPACTRIFLE, WEAPON_PUMPSHOTGUN, WEAPON_SAWNOFFSHOTGUN,
+		WEAPON_BULLPUPSHOTGUN, WEAPON_ASSAULTSHOTGUN, WEAPON_MUSKET, WEAPON_HEAVYSHOTGUN,
+		WEAPON_DBSHOTGUN, WEAPON_AUTOSHOTGUN, WEAPON_SNIPERRIFLE, WEAPON_HEAVYSNIPER,
+		WEAPON_MARKSMANRIFLE, WEAPON_GRENADELAUNCHER, WEAPON_GRENADELAUNCHER_SMOKE,
+		WEAPON_RPG, WEAPON_MINIGUN, WEAPON_FIREWORK, WEAPON_RAILGUN, WEAPON_HOMINGLAUNCHER, WEAPON_COMPACTLAUNCHER*/
+
 		return numTints;
 	}
 }
@@ -254,7 +326,7 @@ unsigned char getDefaultComponentForSlot(WeaponData & currentWeaponData, int slo
 
 void setWeaponVariant(PedSkin & skin, Ped id, WeaponData & currentWeaponData){
 	Hash component;
-	if (skin.weapon == 3638508604){ //WEAPON_KNUCKLE
+	if (skin.weapon == 0xD8DF3C3C){ //WEAPON_KNUCKLE
 		component = GAMEPLAY::GET_HASH_KEY((char*)weaponComponentNames[currentWeaponData.cmpToHashIDMap[0] + skin.weaponTint]);
 		WEAPON::GIVE_WEAPON_COMPONENT_TO_PED(id, skin.weapon, component);
 	}
@@ -268,7 +340,7 @@ DWORD getPedWeaponVariant(Ped pedID, Hash weapon, WeaponData & currentWeaponData
 	if (0 == WEAPON::HAS_PED_GOT_WEAPON(pedID, weapon, FALSE)){
 		return 0;
 	}
-	if (weapon == 3638508604){ //WEAPON_KNUCKLE
+	if (weapon == 0xD8DF3C3C){ //WEAPON_KNUCKLE
 		for (DWORD i = 0; i < getWeaponTintMax(weapon); ++i){
 			component = GAMEPLAY::GET_HASH_KEY((char*)weaponComponentNames[currentWeaponData.cmpToHashIDMap[0] + i]);
 			if (WEAPON::HAS_PED_GOT_WEAPON_COMPONENT(pedID, weapon, component)){
@@ -318,15 +390,15 @@ LPCSTR getWeaponName(Hash weapon){
 bool isAmmoWeapon(Hash weapon){
 	switch (weapon)	{
 		// Weapons
-	case 600439132:  //WEAPON_BALL=
-	case 126349499:  //WEAPON_SNOWBALL
-	case 0x93E220BD: //WEAPON_GRENADE=
-	case 741814745:  //WEAPON_STICKYBOMB=
-	case 2874559379: //WEAPON_PROXMINE
-	case 0xFDBC8A50: //WEAPON_SMOKEGRENADE=
-	case 0xA0973D5E: //WEAPON_BZGAS=
-	case 1233104067: //WEAPON_FLARE=
-	case 615608432:  //WEAPON_MOLOTOV=
+	case 0x23C9F95C: //WEAPON_BALL
+	case 0x0787F0BB: //WEAPON_SNOWBALL
+	case 0x93E220BD: //WEAPON_GRENADE
+	case 0x2C3731D9: //WEAPON_STICKYBOMB
+	case 0xAB564B93: //WEAPON_PROXMINE
+	case 0xFDBC8A50: //WEAPON_SMOKEGRENADE
+	case 0xA0973D5E: //WEAPON_BZGAS
+	case 0x497FACC3: //WEAPON_FLARE
+	case 0x24B17070: //WEAPON_MOLOTOV
 		return true;
 	default:
 		return false;
@@ -334,40 +406,40 @@ bool isAmmoWeapon(Hash weapon){
 }
 
 bool isKnuckle(Hash weapon){
-	return (weapon == 3638508604);
+	return (weapon == 0xD8DF3C3C);
 }
 
 WeaponData getWeaponComponentData(Hash weapon){
 	switch (weapon) {
 	// case hash: return WeaponData(numModSlots, defaultModMask b, modSlotNameIndices, modNameIndices); break;
-	case 453432689: return WeaponData(3, 15, std::vector<unsigned char>{0, 1, 2, 3, 0, 0, 0}, std::vector<unsigned char>{ 17, 18, 1, 4, 0, 0, 0 }); break; //Pistol
-	case 1593441988: return WeaponData(3, 15, std::vector<unsigned char>{0, 1, 2, 3, 0, 0, 0}, std::vector<unsigned char>{19, 20, 1, 3, 0, 0, 0}); break; //CombatPistol
-	case 584646201: return WeaponData(3, 15, std::vector<unsigned char>{0, 1, 2, 3, 0, 0, 0}, std::vector<unsigned char>{21, 22, 1, 3, 0, 0, 0}); break;//APPistol
-	case 0x99aeeb3b: return WeaponData(3, 15, std::vector<unsigned char>{0, 1, 2, 3, 0, 0, 0}, std::vector<unsigned char>{23, 24, 1, 6, 0, 0, 0}); break;//Pistol50
-	case 3218215474: return WeaponData(1, 3, std::vector<unsigned char>{0, 1, 0, 0, 0, 0, 0}, std::vector<unsigned char>{25, 26, 0, 0, 0, 0, 0}); break;//WEAPON_SNSPISTOL
-	case 3523564046: return WeaponData(3, 15, std::vector<unsigned char>{0, 1, 2, 3, 0, 0, 0}, std::vector<unsigned char>{27, 28, 1, 3, 0, 0, 0}); break;//WEAPON_HEAVYPISTOL
-	case 137902532: return WeaponData(2, 11, std::vector<unsigned char>{0, 1, 3, 0, 0, 0, 0}, std::vector<unsigned char>{29, 30, 0, 3, 0, 0, 0}); break; //WEAPON_VINTAGEPISTOL
-	case 324215364: return WeaponData(4, 31, std::vector<unsigned char>{0, 1, 2, 3, 4, 0, 0}, std::vector<unsigned char>{31, 32, 1, 6, 8, 0, 0}); break;//MicroSMG
-	case 736523883: return WeaponData(4, 31, std::vector<unsigned char>{0, 1, 2, 3, 4, 0, 0}, std::vector<unsigned char>{33, 34, 2, 3, 9, 0, 0}); break;//SMG
+	case 0x1B06D571: return WeaponData(3, 15, std::vector<unsigned char>{0, 1, 2, 3, 0, 0, 0}, std::vector<unsigned char>{ 17, 18, 1, 4, 0, 0, 0 }); break; //Pistol
+	case 0x5EF9FEC4: return WeaponData(3, 15, std::vector<unsigned char>{0, 1, 2, 3, 0, 0, 0}, std::vector<unsigned char>{19, 20, 1, 3, 0, 0, 0}); break; //CombatPistol
+	case 0x22D8FE39: return WeaponData(3, 15, std::vector<unsigned char>{0, 1, 2, 3, 0, 0, 0}, std::vector<unsigned char>{21, 22, 1, 3, 0, 0, 0}); break;//APPistol
+	case 0x99AEEB3B: return WeaponData(3, 15, std::vector<unsigned char>{0, 1, 2, 3, 0, 0, 0}, std::vector<unsigned char>{23, 24, 1, 6, 0, 0, 0}); break;//Pistol50
+	case 0xBFD21232: return WeaponData(1, 3, std::vector<unsigned char>{0, 1, 0, 0, 0, 0, 0}, std::vector<unsigned char>{25, 26, 0, 0, 0, 0, 0}); break;//WEAPON_SNSPISTOL
+	case 0xD205520E: return WeaponData(3, 15, std::vector<unsigned char>{0, 1, 2, 3, 0, 0, 0}, std::vector<unsigned char>{27, 28, 1, 3, 0, 0, 0}); break;//WEAPON_HEAVYPISTOL
+	case 0x083839C4: return WeaponData(2, 11, std::vector<unsigned char>{0, 1, 3, 0, 0, 0, 0}, std::vector<unsigned char>{29, 30, 0, 3, 0, 0, 0}); break; //WEAPON_VINTAGEPISTOL
+	case 0x13532244: return WeaponData(4, 31, std::vector<unsigned char>{0, 1, 2, 3, 4, 0, 0}, std::vector<unsigned char>{31, 32, 1, 6, 8, 0, 0}); break;//MicroSMG
+	case 0x2BE6766B: return WeaponData(4, 31, std::vector<unsigned char>{0, 1, 2, 3, 4, 0, 0}, std::vector<unsigned char>{33, 34, 2, 3, 9, 0, 0}); break;//SMG
 	case 0xEFE7E2DF: return WeaponData(4, 31, std::vector<unsigned char>{0, 1, 2, 3, 4, 0, 0}, std::vector<unsigned char>{35, 36, 2, 6, 8, 0, 0}); break;//assaultsmg
 	case 0xBFEFFF6D: return WeaponData(5, 63, std::vector<unsigned char>{0, 1, 2, 3, 4, 5, 0}, std::vector<unsigned char>{37, 38, 2, 6, 8, 16, 0}); break;//AssaultRifle
 	case 0x83BF0278: return WeaponData(5, 63, std::vector<unsigned char>{0, 1, 2, 3, 4, 5, 0}, std::vector<unsigned char>{39, 40, 2, 5, 12, 16, 0}); break;//Carbine
 	case 0xAF113F99: return WeaponData(4, 31, std::vector<unsigned char>{0, 1, 2, 3, 4, 0, 0}, std::vector<unsigned char>{41, 42, 2, 5, 10, 0, 0}); break;//advancedrifle
-	case 3231910285: return WeaponData(5, 63, std::vector<unsigned char>{0, 1, 2, 3, 4, 5, 0}, std::vector<unsigned char>{43, 44, 2, 6, 12, 16, 0}); break;//WEAPON_SPECIALCARBINE
-	case 2132975508: return WeaponData(5, 63, std::vector<unsigned char>{0, 1, 2, 3, 4, 5, 0}, std::vector<unsigned char>{45, 46, 2, 5, 10, 16, 0}); break;//WEAPON_BULLPUPRIFLE
+	case 0xC0A3098D: return WeaponData(5, 63, std::vector<unsigned char>{0, 1, 2, 3, 4, 5, 0}, std::vector<unsigned char>{43, 44, 2, 6, 12, 16, 0}); break;//WEAPON_SPECIALCARBINE
+	case 0x7F229F94: return WeaponData(5, 63, std::vector<unsigned char>{0, 1, 2, 3, 4, 5, 0}, std::vector<unsigned char>{45, 46, 2, 5, 10, 16, 0}); break;//WEAPON_BULLPUPRIFLE
 	case 0x9D07F764: return WeaponData(2, 19, std::vector<unsigned char>{0, 1, 4, 0, 0, 0, 0}, std::vector<unsigned char>{47, 48, 0, 0, 11, 0, 0}); break;//mg
-	case 2144741730: return WeaponData(3, 51, std::vector<unsigned char>{0, 1, 4, 5, 0, 0, 0}, std::vector<unsigned char>{49, 50, 0, 0, 12, 16, 0}); break;//combatmg
-	case 487013001: return WeaponData(2, 12, std::vector<unsigned char>{2, 3, 0, 0, 0, 0, 0}, std::vector<unsigned char>{0, 0, 2, 7, 0, 0, 0}); break;//pumpshotgun
+	case 0x7FD62962: return WeaponData(3, 51, std::vector<unsigned char>{0, 1, 4, 5, 0, 0, 0}, std::vector<unsigned char>{49, 50, 0, 0, 12, 16, 0}); break;//combatmg
+	case 0x1D073A89: return WeaponData(2, 12, std::vector<unsigned char>{2, 3, 0, 0, 0, 0, 0}, std::vector<unsigned char>{0, 0, 2, 7, 0, 0, 0}); break;//pumpshotgun
 	case 0xE284C527: return WeaponData(4, 47, std::vector<unsigned char>{0, 1, 2, 3, 5, 0, 0}, std::vector<unsigned char>{51, 52, 2, 5, 0, 16, 0}); break;//assaultshotgun
 	case 0x9D61E50F: return WeaponData(3, 44, std::vector<unsigned char>{2, 3, 5, 0, 0, 0, 0}, std::vector<unsigned char>{0, 0, 2, 6, 0, 16, 0}); break;//bullpupshotgun
-	case 984333226:	return WeaponData(4, 47, std::vector<unsigned char>{0, 1, 2, 3, 5, 0, 0}, std::vector<unsigned char>{53, 54, 2, 6, 0, 16, 0}); break;//WEAPON_HEAVYSHOTGUN
-	case 0x5fc3c11: return WeaponData(2, 72, std::vector<unsigned char>{3, 6, 0, 0, 0, 0, 0}, std::vector<unsigned char>{55, 0, 0, 6, 13, 0, 15}); break;//sniper
-	case 0xc472fe2: return WeaponData(1, 64, std::vector<unsigned char>{6, 0, 0, 0, 0, 0, 0}, std::vector<unsigned char>{56, 0, 0, 0, 13, 0, 15}); break;//heavySniper
-	case 3342088282: return WeaponData(5, 63, std::vector<unsigned char>{0, 1, 2, 3, 4, 5, 0}, std::vector<unsigned char>{57, 58, 2, 5, 14, 16, 0}); //WEAPON_MARKSMANRIFLE
+	case 0x3AABBBAA: return WeaponData(4, 47, std::vector<unsigned char>{0, 1, 2, 3, 5, 0, 0}, std::vector<unsigned char>{53, 54, 2, 6, 0, 16, 0}); break;//WEAPON_HEAVYSHOTGUN
+	case 0x05FC3C11: return WeaponData(2, 72, std::vector<unsigned char>{3, 6, 0, 0, 0, 0, 0}, std::vector<unsigned char>{55, 0, 0, 6, 13, 0, 15}); break;//sniper
+	case 0x0C472FE2: return WeaponData(1, 64, std::vector<unsigned char>{6, 0, 0, 0, 0, 0, 0}, std::vector<unsigned char>{56, 0, 0, 0, 13, 0, 15}); break;//heavySniper
+	case 0xC734385A: return WeaponData(5, 63, std::vector<unsigned char>{0, 1, 2, 3, 4, 5, 0}, std::vector<unsigned char>{57, 58, 2, 5, 14, 16, 0}); //WEAPON_MARKSMANRIFLE
 	case 0xA284510B: return WeaponData(3, 52, std::vector<unsigned char>{2, 4, 5, 0, 0, 0, 0}, std::vector<unsigned char>{0, 0, 2, 0, 10, 16, 0});   //grenadelauncher
-	case 1627465347: return WeaponData(1, 3, std::vector<unsigned char>{0, 1, 0, 0, 0, 0, 0}, std::vector<unsigned char>{59, 60, 0, 0, 0, 0, 0});    //WEAPON_GUSENBERG
-	case 0xA3D4D34: return WeaponData(4, 55, std::vector<unsigned char>{0, 1, 2, 4, 5, 0, 0}, std::vector<unsigned char>{61, 62, 2, 0, 10, 16, 0});  //WEAPON_COMBATPDW
-	case 3638508604: return WeaponData(0, 0, std::vector<unsigned char>{0, 0, 0, 0, 0, 0, 0}, std::vector<unsigned char>{63, 0, 0, 0, 0, 0, 0});     //WEAPON_KNUCKLE
+	case 0x61012683: return WeaponData(1, 3, std::vector<unsigned char>{0, 1, 0, 0, 0, 0, 0}, std::vector<unsigned char>{59, 60, 0, 0, 0, 0, 0});    //WEAPON_GUSENBERG
+	case 0x0A3D4D34: return WeaponData(4, 55, std::vector<unsigned char>{0, 1, 2, 4, 5, 0, 0}, std::vector<unsigned char>{61, 62, 2, 0, 10, 16, 0});  //WEAPON_COMBATPDW
+	case 0xD8DF3C3C: return WeaponData(0, 0, std::vector<unsigned char>{0, 0, 0, 0, 0, 0, 0}, std::vector<unsigned char>{63, 0, 0, 0, 0, 0, 0});     //WEAPON_KNUCKLE
 
 	default:
 		break;
