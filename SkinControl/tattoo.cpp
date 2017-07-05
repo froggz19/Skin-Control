@@ -175,9 +175,9 @@ const std::vector< std::vector< std::vector< LPCSTR >>>tats = { // player type, 
 			"MP_LR_Tat_005_F", "MP_LR_Tat_027_F", "MP_LR_Tat_033_F",
 			/*mplowrider2*/
 			"MP_LR_Tat_006_F", "MP_LR_Tat_018_F", "MP_LR_Tat_022_F",
-			//mpluxe
+			/*mpluxe*/
 			"MP_LUXE_TAT_009_F", "MP_LUXE_TAT_020_F", "MP_LUXE_TAT_021_F",
-			//mpluxe2
+			/*mpluxe2*/
 			"MP_LUXE_TAT_005_F", "MP_LUXE_TAT_016_F", "MP_LUXE_TAT_018_F", "MP_LUXE_TAT_028_F",
 			"MP_LUXE_TAT_031_F",
 			/*mpstunt*/
@@ -212,9 +212,9 @@ const std::vector< std::vector< std::vector< LPCSTR >>>tats = { // player type, 
 			"MP_LR_Tat_015_F",
 			/*mplowrider2*/
 			"MP_LR_Tat_003_F", "MP_LR_Tat_028_F", "MP_LR_Tat_035_F",
-			//mpluxe
+			/*mpluxe*/
 			"MP_LUXE_TAT_004_F", "MP_LUXE_TAT_013_F", "MP_LUXE_TAT_019_F",
-			//mpluxe2
+			/*mpluxe2*/
 			"MP_LUXE_TAT_010_F", "MP_LUXE_TAT_017_F", "MP_LUXE_TAT_026_F", "MP_LUXE_TAT_030_F",
 			/*mpstunt*/
 			"MP_MP_Stunt_tat_003_F", "MP_MP_Stunt_tat_009_F", "MP_MP_Stunt_tat_010_F", "MP_MP_Stunt_tat_016_F",
@@ -222,31 +222,31 @@ const std::vector< std::vector< std::vector< LPCSTR >>>tats = { // player type, 
 		},
 		/*female left leg*/
 		{   /*multiplayer_overlays*/
-			"FM_Tat_Award_F_009", "FM_Tat_F_002", "FM_Tat_F_008", "FM_Tat_F_021",
-			"FM_Tat_F_023", "FM_Tat_F_026", "FM_Tat_F_032", "FM_Tat_F_033",
-			"FM_Tat_F_035", "FM_Tat_F_037",
-			/*mpbiker*/
-			"MP_MP_Biker_Tat_002_F", "MP_MP_Biker_Tat_015_F", "MP_MP_Biker_Tat_027_F", "MP_MP_Biker_Tat_036_F",
-			"MP_MP_Biker_Tat_037_F", "MP_MP_Biker_Tat_044_F", "MP_MP_Biker_Tat_056_F", "MP_MP_Biker_Tat_057_F",
-			/*mpbusiness*/
-			"MP_Buis_F_LLeg_000",
-			/*mpxmas2*/
-			"MP_Xmas2_F_Tat_001", "MP_Xmas2_F_Tat_002",
-			/*gunrunning*/
-			"MP_Gunrunning_Tattoo_005_F", "MP_Gunrunning_Tattoo_007_F", "MP_Gunrunning_Tattoo_011_F", "MP_Gunrunning_Tattoo_023_F",
-			/*mphipster*/
-			"FM_Hip_F_Tat_009", "FM_Hip_F_Tat_019", "FM_Hip_F_Tat_040",
-			/*mplowrider*/
-			"MP_LR_Tat_007_F", "MP_LR_Tat_020_F",
-			/*mplowrider2*/
-			"MP_LR_Tat_029_F",
-			//mpluxe
-			"MP_LUXE_TAT_000_F",
-			//mpluxe2
-			"MP_LUXE_TAT_011_F",
-			/*mpstunt*/
-			"MP_MP_Stunt_tat_007_F", "MP_MP_Stunt_tat_013_F", "MP_MP_Stunt_tat_021_F", "MP_MP_Stunt_tat_028_F",
-			"MP_MP_Stunt_tat_031_F"
+            "FM_Tat_Award_F_009", "FM_Tat_F_002", "FM_Tat_F_008", "FM_Tat_F_021",
+            "FM_Tat_F_023", "FM_Tat_F_026", "FM_Tat_F_032", "FM_Tat_F_033",
+            "FM_Tat_F_035", "FM_Tat_F_037",
+            /*mpbiker*/
+            "MP_MP_Biker_Tat_002_F", "MP_MP_Biker_Tat_015_F", "MP_MP_Biker_Tat_027_F", "MP_MP_Biker_Tat_036_F",
+            "MP_MP_Biker_Tat_037_F", "MP_MP_Biker_Tat_044_F", "MP_MP_Biker_Tat_056_F", "MP_MP_Biker_Tat_057_F",
+            /*mpbusiness*/
+            "MP_Buis_F_LLeg_000",
+            /*mpxmas2*/
+            "MP_Xmas2_F_Tat_001", "MP_Xmas2_F_Tat_002",
+            /*gunrunning*/
+            "MP_Gunrunning_Tattoo_005_F", "MP_Gunrunning_Tattoo_007_F", "MP_Gunrunning_Tattoo_011_F", "MP_Gunrunning_Tattoo_023_F",
+            /*mphipster*/
+            "FM_Hip_F_Tat_009", "FM_Hip_F_Tat_019", "FM_Hip_F_Tat_040",
+            /*mplowrider*/
+            "MP_LR_Tat_007_F", "MP_LR_Tat_020_F",
+            /*mplowrider2*/
+            "MP_LR_Tat_029_F",
+            /*mpluxe*/
+            "MP_LUXE_TAT_000_F",
+            /*mpluxe2*/
+            "MP_LUXE_TAT_011_F",
+            /*mpstunt*/
+            "MP_MP_Stunt_tat_007_F", "MP_MP_Stunt_tat_013_F", "MP_MP_Stunt_tat_021_F", "MP_MP_Stunt_tat_028_F",
+            "MP_MP_Stunt_tat_031_F"
 		},
 		/*female right leg*/
 		{   /*multiplayer_overlays*/
@@ -269,9 +269,9 @@ const std::vector< std::vector< std::vector< LPCSTR >>>tats = { // player type, 
 			"MP_LR_Tat_017_F", "MP_LR_Tat_023_F",
 			/*mplowrider2*/
 			"MP_LR_Tat_030_F",
-			//mpluxe
+			/*mpluxe*/
 			"MP_LUXE_TAT_001_F",
-			//mpluxe2			"MP_LUXE_TAT_023_F",
+			/*mpluxe2*/			"MP_LUXE_TAT_023_F",
 			/*mpstunt*/
 			"MP_MP_Stunt_tat_005_F", "MP_MP_Stunt_tat_015_F", "MP_MP_Stunt_tat_020_F", "MP_MP_Stunt_tat_025_F",
 			"MP_MP_Stunt_tat_032_F", "MP_MP_Stunt_tat_045_F", "MP_MP_Stunt_tat_047_F"
