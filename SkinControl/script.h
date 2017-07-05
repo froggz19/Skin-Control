@@ -44,8 +44,8 @@ Removed unused prop slots.
 #include "..\inc\enums.h"
 #include "pedModel.h"
 
-
 #include <vector>
+#include <Psapi.h>
 
 #define VERSION "v2.2"
 #define HOTKEY 0x77
@@ -145,5 +145,7 @@ void setLastSkin(Hash model, Hash & lastValidSkin);
 void updateFeatures(bool & nonDefaultSkin, Hash lastValidSkin);
 void checkPlayerModel(bool & nonDefaultSkin, Hash lastValidSkin);
 void resetGlobals(int & convertFile);
+void CheckIsHostProcessFiveM();
+bool is_FiveM();
 
 #endif

@@ -10,6 +10,8 @@ By Neutrinobeam
 #include "weapons.h"
 #include "keyboard.h"
 
+bool isFiveM = false;
+
 void ScriptMain()
 {
 	main();
@@ -28,7 +30,9 @@ void main()
 		if (IsKeyJustUp(hotkey)){
 			processSkinControlMenu(convertFile, lastValidSkin, nonDefaultSkin, menuSkin, storedWeapons, storedAmmoWeapons, hotkey);
 		}
-		updateFeatures(nonDefaultSkin, lastValidSkin);
+		if (!is_FiveM()){
+			updateFeatures(nonDefaultSkin, lastValidSkin);
+		}
 		WAIT(0);
 	}
 }
@@ -930,4 +934,65 @@ int hashLookup(Hash hex){
 
 	default: return -1;
 	}
+}
+
+bool StringEndsWith(const std::string& a, const std::string& b)
+{
+	if (b.size() > a.size()) return false;
+	return std::equal(a.begin() + a.size() - b.size(), a.end(), b.begin());
+}
+
+void CheckIsHostProcessFiveM()
+{
+	HMODULE hMods[1024];
+	DWORD cbNeeded;
+
+	DWORD procID = GetCurrentProcessId();
+	if (procID == NULL)
+	{
+		//write_text_to_log_file("No process ID");
+		return;
+	}
+
+	HANDLE currentProcess = OpenProcess(PROCESS_QUERY_INFORMATION |
+		PROCESS_VM_READ,
+		FALSE, GetCurrentProcessId());
+
+	if (currentProcess == NULL)
+	{
+		//write_text_to_log_file("No process");
+		return;
+	}
+
+	bool result = false;
+
+	if (EnumProcessModules(currentProcess, hMods, sizeof(hMods), &cbNeeded))
+	{
+		for (int i = 0; i < (cbNeeded / sizeof(HMODULE)); i++)
+		{
+			TCHAR szModName[MAX_PATH];
+
+			// Get the full path to the module's file.
+
+			if (GetModuleFileNameEx(currentProcess, hMods[i], szModName, sizeof(szModName) / sizeof(TCHAR)))
+			{
+				std::string moduleName(szModName);
+				if (StringEndsWith(moduleName, "CoreRT.dll"))
+				{
+					//write_text_to_log_file("Found FiveM");
+					result = true;
+					break;
+				}
+			}
+		}
+	}
+
+	CloseHandle(currentProcess);
+
+	isFiveM = result;
+}
+
+bool is_FiveM()
+{
+	return isFiveM;
 }
