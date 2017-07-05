@@ -195,9 +195,10 @@ const std::vector< std::vector< std::vector< LPCSTR >>>tats = { // player type, 
 			"MP_MP_Biker_Tat_007_F", "MP_MP_Biker_Tat_014_F", "MP_MP_Biker_Tat_033_F", "MP_MP_Biker_Tat_042_F",
 			"MP_MP_Biker_Tat_046_F", "MP_MP_Biker_Tat_047_F", "MP_MP_Biker_Tat_049_F", "MP_MP_Biker_Tat_054_F",
 			/*mpbusiness*/
-			"MP_Buis_F_RArm_000",			"MP_Female_Crew_Tat_001",
+			"MP_Buis_F_RArm_000", "MP_Female_Crew_Tat_001",
 			/*mpxmas2*/
-			"MP_Xmas2_F_Tat_003", "MP_Xmas2_F_Tat_004", "MP_Xmas2_F_Tat_008","MP_Xmas2_F_Tat_022",			"MP_Xmas2_F_Tat_023", "MP_Xmas2_F_Tat_026", "MP_Xmas2_F_Tat_027",
+			"MP_Xmas2_F_Tat_003", "MP_Xmas2_F_Tat_004", "MP_Xmas2_F_Tat_008", "MP_Xmas2_F_Tat_022",
+			"MP_Xmas2_F_Tat_023", "MP_Xmas2_F_Tat_026", "MP_Xmas2_F_Tat_027",
 			/*gunrunning*/
 			"MP_Gunrunning_Tattoo_002_F", "MP_Gunrunning_Tattoo_021_F", "MP_Gunrunning_Tattoo_024_F",
 			/*mphipster*/
@@ -270,8 +271,8 @@ const std::vector< std::vector< std::vector< LPCSTR >>>tats = { // player type, 
 			"MP_LR_Tat_030_F",
 			//mpluxe
 			"MP_LUXE_TAT_001_F",
-			//mpluxe2
-			"MP_LUXE_TAT_023_F",			/*mpstunt*/
+			//mpluxe2			"MP_LUXE_TAT_023_F",
+			/*mpstunt*/
 			"MP_MP_Stunt_tat_005_F", "MP_MP_Stunt_tat_015_F", "MP_MP_Stunt_tat_020_F", "MP_MP_Stunt_tat_025_F",
 			"MP_MP_Stunt_tat_032_F", "MP_MP_Stunt_tat_045_F", "MP_MP_Stunt_tat_047_F"
 		},
